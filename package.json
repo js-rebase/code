@@ -8,5 +8,9 @@
   "scripts": {
     "test": "node --test packages/core/test/*.test.js"
   },
-  "license": "MIT"
+  "license": "MIT",
+  {
+  "exports": {
+    ".": "./packages/main.js"
+  }
 }
