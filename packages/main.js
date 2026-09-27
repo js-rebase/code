@@ -5,7 +5,7 @@ import "./core/config.js";
 const rebase = {
   include: {
     load: async () => {
-      if (getConfig("include", false) === false) return;
+      if (await getConfig("include", false) === false) return;
       await processIncludes();
     }
   }
