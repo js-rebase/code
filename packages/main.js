@@ -1,9 +1,13 @@
 // rebase - main.js
 import { processIncludes } from "./include/index.js";
+import "./core/config.js";
 
 const rebase = {
   include: {
-    load: async () => { await processIncludes(); }
+    load: async () => {
+      if (getConfig("include", false) === false) return;
+      await processIncludes();
+    }
   }
 };
 
