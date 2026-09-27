@@ -1,6 +1,6 @@
 // rebase - main.js
 import { processIncludes } from "./include/index.js";
-import "./core/config.js";
+import getConfig from "./core/config.js";
 
 const rebase = {
   include: {
