@@ -42,10 +42,10 @@ function loadConfig() {
   return config;
 }
 
-export function getConfig(key) {
+export function getConfig(key, fallback = undefined) {
   const value = key
     .split(".")
     .reduce((current, part) => current?.[part], loadConfig());
 
-  return value;
+  return value ?? fallback;
 }
